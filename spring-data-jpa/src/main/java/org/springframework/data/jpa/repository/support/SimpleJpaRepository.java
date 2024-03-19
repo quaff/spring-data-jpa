@@ -195,7 +195,7 @@ public class SimpleJpaRepository<T, ID> implements JpaRepositoryImplementation<T
 			return;
 		}
 
-		entityManager.remove(entityManager.contains(entity) ? entity : entityManager.merge(entity));
+		entityManager.remove(existing);
 	}
 
 	@Override
